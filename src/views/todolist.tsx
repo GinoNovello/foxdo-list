@@ -62,10 +62,10 @@ export function TodoList() {
             setTitle(textTranslated.defaulttitle);
         }
         localStorage.setItem("title", title);
-    }, [title, language]);
+    }, [title, textTranslated]);
 
     return (
-        <div className="backdrop-blur-sm flex max-w-[446px] flex-col items-center justify-center space-y-4 p-4 bg-black/50 rounded-md shadow-md">
+        <div className="backdrop-blur-sm flex max-w-[446px] flex-col items-center justify-center space-y-4 p-4 bg-black/50 rounded-md shadow-md max-h-64 xs:max-h-full">
             {edit ? (
                 <div className="flex items-center gap-3">
                     <div className="flex flex-col group">
@@ -88,7 +88,7 @@ export function TodoList() {
                 </div>
             ) : (
                 <div className="flex gap-3 items-center">
-                    <h1 className="text-white text-2xl border-b border-transparent">{textTranslated.defaulttitle}</h1>
+                    <h1 className="text-white text-2xl border-b border-transparent">{title}</h1>
                     <i
                         className="fa-regular fa-pen-to-square cursor-pointer text-violet-300"
                         onClick={() => setEdit(true)}
