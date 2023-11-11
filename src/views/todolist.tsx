@@ -95,6 +95,7 @@ export function TodoList() {
                     />
                 </div>
             )}
+
             {tasks.length < 1 ? (
                 <div className="h-60 w-60 flex p-4 justify-center text-gray-400"> {textTranslated.addtask_below}</div>
             ) : (
