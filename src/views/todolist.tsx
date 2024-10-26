@@ -51,6 +51,7 @@ export function TodoList() {
                 value: value,
             },
         ]);
+        target.reset();
     };
 
     useEffect(() => {
